@@ -51,6 +51,8 @@ sketchybar --default "${default[@]}"
 source $ITEM_DIR/front_app.sh
 source $ITEM_DIR/aerospace_workspaces.sh
 
+#-- Center Items --
+source $ITEM_DIR/spotify_song.sh
 #-- Right side items --
 source $ITEM_DIR/clock.sh
 source $ITEM_DIR/calendar.sh
