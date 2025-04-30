@@ -4,9 +4,13 @@
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- For easy editing of lua files, sourcing the current file
 vim.keymap.set('n', '<space>x', '<cmd>source %<CR>', { desc = 'Source the current file' })
-vim.keymap.set('n', '<space>x', ':.lua<CR>')
+-- vim.keymap.set('n', '<space>x', ':.lua<CR>')
 vim.keymap.set('v', '<space>x', ':.lua<CR>')
+
+-- OIL: An easier way to edit files in file tree
+vim.keymap.set('n', '-', '<cmd>Oil<CR>') --For exiting current file into FD
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
