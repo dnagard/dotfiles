@@ -24,11 +24,18 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #Aliases
 alias v='nvim'
-alias ls='ls -a --color'
 alias c='clear'
 alias ..='cd ..'
 alias ....='cd ../..'
 alias lg='lazygit'
+#ls aliases for file exploring
+alias ls='eza -lh --group-directories-last --icons --git --color-scale'
+alias ld='eza -lhD --icons --git --color-scale'
+alias lsa='eza -alh --group-directories-last --icons --git --color-scale'
+alias tree='eza -T --icons'
+alias atree='eza -aT --icons'
+
+
 
 #Keybindings
 bindkey '^p' history-search-backward
@@ -52,11 +59,5 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-
-
-export PATH="$PATH:/Users/danielnagard/Library/Application Support/Coursier/bin"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
-export PATH="$(brew --prefix openjdk)/bin:$PATH"
-export JAVA_HOME="$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home"
 
 
