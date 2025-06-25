@@ -64,4 +64,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 export CPATH="$(brew --prefix openblas)/include:$CPATH"
 export LIBRARY_PATH="$(brew --prefix openblas)/lib:$LIBRARY_PATH"
 
+#Zoxide
+eval "$(zoxide init zsh)"
+
 neofetch
