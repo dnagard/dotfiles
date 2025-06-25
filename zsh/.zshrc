@@ -60,5 +60,8 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+#Exports
+export CPATH="$(brew --prefix openblas)/include:$CPATH"
+export LIBRARY_PATH="$(brew --prefix openblas)/lib:$LIBRARY_PATH"
 
 neofetch
