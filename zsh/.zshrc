@@ -21,6 +21,8 @@ autoload -U compinit && compinit
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+#Zoxide
+eval "$(zoxide init zsh)"
 
 #Aliases
 alias v='nvim'
@@ -64,7 +66,5 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 export CPATH="$(brew --prefix openblas)/include:$CPATH"
 export LIBRARY_PATH="$(brew --prefix openblas)/lib:$LIBRARY_PATH"
 
-#Zoxide
-eval "$(zoxide init zsh)"
 
 neofetch
