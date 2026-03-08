@@ -37,6 +37,10 @@ alias lsa='eza -alh --group-directories-last --icons --git --color-scale'
 alias tree='eza -T --icons'
 alias atree='eza -aT --icons'
 
+#Functions
+copy() {
+  pbcopy < "$1"
+}
 
 
 #Keybindings
@@ -68,3 +72,4 @@ export LIBRARY_PATH="$(brew --prefix openblas)/lib:$LIBRARY_PATH"
 
 
 neofetch
+export PATH="$HOME/.local/bin:$PATH"
